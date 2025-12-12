@@ -7,6 +7,3 @@ import { initEvents } from "./events.js";
 await fetchNotes();
 renderNotes();
 initEvents();
-
-
-//TODO TODO SYNCING EDITED NOTES CREATES NEW ONES
