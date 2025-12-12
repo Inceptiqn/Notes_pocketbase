@@ -47,26 +47,13 @@ Prima di iniziare, assicurati di avere installato:
    npm install
    ```
 
-3. **Avvia PocketBase:**
-   
-   Su **Windows:**
-   ```powershell
-   .\pocketbase_0.33.0_windows_amd64\pocketbase.exe serve
-   ```
-   
-   Su **Linux/macOS:**
-   ```bash
-   ./pocketbase_0.33.0_linux_amd64/pocketbase serve
-   ```
-
-4. **Avvia il server di sviluppo:**
+3. **Avvia il server di sviluppo:**
    ```bash
    npm run dev
    ```
 
-5. **Apri l'applicazione:**
+4. **Apri l'applicazione:**
    - Frontend: http://localhost:5173
-   - PocketBase Admin: http://localhost:8090/_/
 
 ##  Struttura del Progetto
 
