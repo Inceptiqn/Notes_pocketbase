@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+  </head>
+  <body class="h-screen bg-base-100">
+    <div id="app" class="h-full flex">
+      <!-- Left Panel -->
+      <div class="w-[30%] border-r border-base-300 flex flex-col">
+        <!-- Header -->
+        <div class="p-4 border-b border-base-300">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <h1 class="text-xl font-bold">Notes</h1>
+              <button id="sync-btn" class="btn btn-sm">Sync</button>
+            </div>
+            <button id="new-note-btn" class="btn btn-primary btn-sm">+</button>
+          </div>
+        </div>
+
+        <!-- Notes List -->
+        <div class="flex-1 overflow-y-auto">
+          <div id="notes-list" class="p-2 space-y-1">
+            <!--DINAMICALLY POPULATED -- render.js-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel-->
+      <div class="w-[70%] flex flex-col">
+        <!-- Editor Header -->
+        <div
+          class="p-4 border-b border-base-300 flex items-center justify-between"
+        >
+          <input
+            type="text"
+            id="note-title"
+            placeholder="Note title..."
+            class="input input-ghost text-lg font-semibold flex-1 p-0 border-0 focus:outline-none"
+          />
+          <div class="flex items-center gap-2">
+            <button id="save-btn" class="btn btn-success btn-sm">Save</button>
+            <button id="delete-btn" class="btn btn-error btn-sm">Delete</button>
+          </div>
+        </div>
+
+        <!-- Editor Content -->
+        <div class="flex-1 p-4">
+          <textarea
+            id="note-content"
+            placeholder="Start writing your note..."
+            class="textarea textarea-ghost w-full h-full resize-none text-base leading-relaxed border-0 focus:outline-none p-0"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden w-[70%] text-center p-8">
+      <div class="text-4xl font-bold text-base-content/30 mb-4">Notes</div>
+      <h2 class="text-xl font-semibold text-base-content/70 mb-2">
+        No note selected
+      </h2>
+      <p class="text-base-content/50">
+        Select a note from the sidebar or create a new one to get started.
+      </p>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
